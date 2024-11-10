@@ -1,0 +1,10 @@
+# config.yaml
+data_path: "data/raw"
+processed_path: "data/processed"
+model_name: "nbroad/longformer-base-health-fact"
+output_dir: "models"
+max_length: 128
+batch_size: 16
+epochs: 5
+lr: 1e-5  # Make sure this is a float, not a string (e.g., 2e-5, not "2e-5")
+

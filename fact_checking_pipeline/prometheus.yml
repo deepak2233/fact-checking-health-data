@@ -1,0 +1,11 @@
+# Prometheus configuration file
+# prometheus.yml
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: "fastapi_app"
+    metrics_path: "/metrics"
+    static_configs:
+      - targets: ["localhost:8000"]
+

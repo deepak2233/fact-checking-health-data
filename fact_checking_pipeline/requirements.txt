@@ -1,0 +1,33 @@
+# Core Libraries
+transformers           # For Hugging Face model loading and training
+datasets               # For handling and processing the dataset
+torch                  # PyTorch for model training
+mlflow                 # For experiment tracking
+
+# Model Deployment
+fastapi                # For API development to serve the model
+uvicorn                # ASGI server for FastAPI
+
+# Monitoring
+prometheus-client      # Prometheus client to expose metrics
+
+# Text Analysis and Processing
+textblob               # For sentiment analysis and processing
+nltk                   # Optional: Text processing utilities
+
+# Testing
+pytest                 # For running unit tests
+pytest-cov             # Optional: For test coverage reporting
+
+# Additional Utilities
+pandas                 # For data manipulation
+scikit-learn           # For metrics like accuracy and F1 score
+pydantic               # For FastAPI data validation
+loguru                 # Optional: Advanced logging
+
+# Optional: Visualization for EDA (Exploratory Data Analysis)
+matplotlib             # For data visualization
+seaborn                # For advanced visualization
+
+# Optional: WandB (Weights & Biases) for logging
+wandb                  # Optional: For experiment tracking

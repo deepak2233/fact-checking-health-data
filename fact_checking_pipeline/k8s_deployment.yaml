@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: health-claim-serve
+  labels:
+    app: health-claim
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: health-claim
+  template:
+    metadata:
+      labels:
+        app: health-claim
+    spec:
+      containers:
+      - name: health-claim-serve
+        image: fact-checking-api:v1
+        ports:
+        - containerPort: 8000  # Matching the FastAPI app's port
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8000  # Probe checks the correct port inside the container
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8000
+          initialDelaySeconds: 10
+          periodSeconds: 15
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: health-claim-service
+spec:
+  selector:
+    app: health-claim
+  ports:
+    - protocol: TCP
+      port: 80           # Expose service on port 80 externally
+      targetPort: 8000   # Directs traffic to port 8000 on the container
+  type: LoadBalancer
+

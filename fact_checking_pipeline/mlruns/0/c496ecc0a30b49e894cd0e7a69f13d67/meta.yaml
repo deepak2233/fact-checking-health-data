@@ -1,0 +1,15 @@
+artifact_uri: file:///root/new_project/fact_checking_pipeline/mlruns/0/c496ecc0a30b49e894cd0e7a69f13d67/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c496ecc0a30b49e894cd0e7a69f13d67
+run_name: capable-auk-759
+run_uuid: c496ecc0a30b49e894cd0e7a69f13d67
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1730962084166
+status: 1
+tags: []
+user_id: root
