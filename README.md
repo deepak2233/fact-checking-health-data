@@ -191,6 +191,12 @@ docker build -t health-claim-serve:v1 .
 docker run -p 8000:80 health-claim-serve:v1
 ```
 
+![sentiment_distribution](eda_output/docker_run.png)
+
+![sentiment_distribution](eda_output/docker_output.png)
+
+---
+
 **Kubernetes Deployment (Optional)**  
 The Kubernetes configuration can deploy the Dockerized application in a cluster.
 
